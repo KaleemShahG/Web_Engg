@@ -1,0 +1,423 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* FLEX */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+/* ================= TOP BAR ================= */
+.topbar {
+  background: #d4a64a;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 0;
+}
+
+.topbar .right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  margin-left: 10px;
+}
+
+.social-icons i {
+  width: 26px;
+  height: 26px;
+  background: lightgoldenrodyellow;
+  color: #d4a64a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 18px 0;
+}
+
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.smalltext {
+  font-size: 10px;
+  color: #999;   /* light grey jaisa image me */
+  margin-top: 2px;
+  letter-spacing: 1px;
+}
+/* NAV LINKS */
+/* LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;   /* ✅ yahan lagay ga */
+}
+.nav-links li {
+  margin-left: auto;
+  padding: 0px  15px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+}
+
+/* DIVIDER LINE */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  right:0;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  width: 1px;
+  height: 14px;
+  background: #ccc;
+}
+
+/* remove last line */
+.nav-links li:last-child::after {
+  display: none;
+}
+
+/* hover */
+.nav-links li:hover {
+  color: #d4a64a;
+}
+
+/* RIGHT ICONS */
+.nav-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-icons i {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #d4a64a;
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #d4a64a;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.nav-icons i:hover {
+  background: #d4a64a;
+  color: #fff;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 500px;
+
+  /* background image + white overlay */
+  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+              url("images/bg.jpg");  /* apni image lagana */
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+}
+
+/* FLEX */
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT TEXT */
+.hero-text {
+  max-width: 480px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.hero-text button {
+  background: #d4a64a;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 13px;
+  cursor: pointer;
+}
+/* arrow add */
+.btn::after {
+  content: ">";
+  margin-left: 8px;
+}
+/* SECTION */
+.features {
+  padding: 70px 0;
+  background: #fff;
+  text-align: center;
+}
+
+/* HEADING */
+.features h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  font-size: 13px;
+  color: #777;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 45px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 30px 20px;
+  height: 260px; /* 🔥 equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.card:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* ICON */
+.card .icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #d4a64a;
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 15px;
+  font-size: 20px;
+  color: #d4a64a;
+}
+
+/* TITLE */
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.card p {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* BUTTON */
+.card button {
+  background: #d4a64a;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+/* MAIN SECTION */
+.why-v1 {
+  padding: 80px 0;
+  background: #f7f7f7;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.why-v1 .why-container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+}
+
+/* LEFT */
+.why-v1 .why-left {
+  flex: 1.2;
+}
+
+.why-v1 .why-left h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.why-v1 .why-desc {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* CONTENT ROW */
+.why-v1 .why-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* IMAGE */
+.why-v1 .why-image img {
+  width: 180px;
+}
+
+/* FEATURES */
+.why-v1 .why-features {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-v1 .why-list {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 15px;
+}
+
+.why-v1 .why-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-v1 .why-list li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.why-v1 .why-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 10px;
+  color: #caa64b;
+}
+
+/* BUTTON (SAFE) */
+.why-v1 .why-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 13px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.why-v1 .why-btn:hover {
+  background: #000;
+}
+
+/* RIGHT */
+.why-v1 .why-right {
+  flex: 1;
+}
+
+/* ACCORDION */
+.why-v1 .why-item {
+  background: #eee;
+  margin-bottom: 5px;
+  padding: 14px 18px;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.why-v1 .why-item h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.why-v1 .why-item p {
+  font-size: 13px;
+  color: #777;
+  margin-top: 10px;
+  display: none;
+  line-height: 1.6;
+}
+
+/* ACTIVE */
+.why-v1 .why-item.active {
+  background: #fff;
+  border-left: 3px solid #caa64b;
+}
+
+.why-v1 .why-item.active p {
+  display: block;
+}
